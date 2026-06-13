@@ -13,7 +13,7 @@ export default function Register() {
     setLoading(true)
     setError('')
     try {
-      const res = await axios.post('http://localhost:8000/auth/register', { email, password })
+      const res = await axios.post('https://resume-analyzer-api-32s4.onrender.com/auth/register', { email, password })
       localStorage.setItem('token', res.data.access_token)
       navigate('/dashboard')
     } catch (err) {

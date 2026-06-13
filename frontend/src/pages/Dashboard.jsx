@@ -18,7 +18,7 @@ export default function Dashboard() {
 
     const fetchResumes = async () => {
         try {
-            const res = await axios.get('http://localhost:8000/resumes/', {
+            const res = await axios.get('https://resume-analyzer-api-32s4.onrender.com/resumes/', {
                 headers: { Authorization: `Bearer ${token}` }
             })
             setResumes(res.data)
@@ -36,7 +36,7 @@ export default function Dashboard() {
         formData.append('file', file)
 
         try {
-            await axios.post('http://localhost:8000/resumes/upload', formData, {
+            await axios.post('https://resume-analyzer-api-32s4.onrender.com/resumes/upload', formData, {
                 headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'multipart/form-data' }
             })
             setMessage('Resume uploaded successfully!')
@@ -57,7 +57,7 @@ export default function Dashboard() {
         setAnalysisResult(null)
 
         try {
-            const res = await axios.post(`http://localhost:8000/analysis/match-job/${resumeId}`,
+            const res = await axios.post(`https://resume-analyzer-api-32s4.onrender.com/analysis/match-job/${resumeId}`,
                 { job_description: jobDesc },
                 { headers: { Authorization: `Bearer ${token}` } }
             )

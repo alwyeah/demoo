@@ -13,7 +13,7 @@ export default function Login() {
     setLoading(true)
     setError('')
     try {
-      const res = await axios.post('http://localhost:8000/auth/login', { email, password })
+      const res = await axios.post('https://resume-analyzer-api-32s4.onrender.com/auth/login', { email, password })
      localStorage.setItem('token', res.data.access_token)
 window.location.href = '/dashboard'
     } catch (err) {
