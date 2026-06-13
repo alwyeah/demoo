@@ -5,7 +5,7 @@ This is a full-stack web application that allows users to upload their resumes (
 ## API Documentation
 Below is the Swagger API documentation for the backend endpoints:
 
-![API Documentation](api-docs.png)
+![API Documentation](api-docs1.png.jpeg,api-docs2.png.jpeg)
 
 ## How to Run the Project locally
 
